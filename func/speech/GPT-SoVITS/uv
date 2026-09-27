@@ -1,0 +1,34 @@
+Ignoring onnxruntime: markers 'platform_machine == "aarch64" or platform_machine == "arm64"' don't match your environment
+Ignoring python_mecab_ko: markers 'sys_platform != "win32"' don't match your environment
+Collecting numpy<2.0 (from -r .\requirements.txt (line 2))
+  Using cached numpy-1.26.4-cp311-cp311-win_amd64.whl.metadata (61 kB)
+Collecting scipy (from -r .\requirements.txt (line 3))
+  Using cached scipy-1.17.1-cp311-cp311-win_amd64.whl.metadata (60 kB)
+Collecting tensorboard (from -r .\requirements.txt (line 4))
+  Using cached tensorboard-2.21.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting librosa==0.10.2 (from -r .\requirements.txt (line 5))
+  Using cached librosa-0.10.2-py3-none-any.whl.metadata (8.6 kB)
+Collecting numba (from -r .\requirements.txt (line 6))
+  Using cached numba-0.67.0-cp311-cp311-win_amd64.whl.metadata (2.8 kB)
+Collecting pytorch-lightning>=2.4 (from -r .\requirements.txt (line 7))
+  Using cached pytorch_lightning-2.6.6-py3-none-any.whl.metadata (21 kB)
+Collecting gradio<5 (from -r .\requirements.txt (line 8))
+  Using cached gradio-4.44.1-py3-none-any.whl.metadata (15 kB)
+Collecting ffmpeg-python (from -r .\requirements.txt (line 9))
+  Using cached ffmpeg_python-0.2.0-py3-none-any.whl.metadata (1.7 kB)
+Collecting onnxruntime-gpu (from -r .\requirements.txt (line 11))
+  Using cached onnxruntime_gpu-1.30.0-cp311-cp311-win_amd64.whl.metadata (6.0 kB)
+Collecting tqdm (from -r .\requirements.txt (line 12))
+  Using cached tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+Collecting funasr>=1.3.7 (from -r .\requirements.txt (line 13))
+  Using cached funasr-1.4.16-py3-none-any.whl.metadata (29 kB)
+Collecting cn2an (from -r .\requirements.txt (line 14))
+  Using cached cn2an-0.5.24-py3-none-any.whl.metadata (10 kB)
+Collecting pypinyin (from -r .\requirements.txt (line 15))
+  Using cached pypinyin-0.55.0-py2.py3-none-any.whl.metadata (12 kB)
+Collecting pyopenjtalk>=0.4.1 (from -r .\requirements.txt (line 16))
+  Using cached pyopenjtalk-0.4.1.tar.gz (1.4 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyHiyaku — Interactive VRM Avatar with Facial Expressions and Lip Sync">
+    <title>AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Three.js Canvas -->
+    <canvas id="vrm-canvas"></canvas>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+    </div>
+
+    <!-- HUD Overlay -->
+    <div class="hud-overlay">
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo">
+                <!-- <div class="logo-icon">雛</div>
+                <span class="logo-text">MyHiyaku</span> -->
+            </div>
+            <div class="status-badge" id="status-badge">
+                <span class="status-dot"></span>
+                <span id="status-text">Disconnected</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Emotion Indicator -->
+    <div class="emotion-panel">
+        <div class="emotion-card">
+            <div class="emotion-label">Current Mood</div>
+            <div class="emotion-value">
+                <span class="emotion-emoji" id="emotion-emoji">😐</span>
+                <span class="emotion-text neutral" id="emotion-text">neutral</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speaking Indicator -->
+    <div class="speaking-indicator" id="speaking-indicator">
+        <div class="speaking-bars">
+            <div class="speaking-bar"></div>
+            <div class="speaking-bar"></div>
+            <div class="speaking-bar"></div>
+            <div class="speaking-bar"></div>
+        </div>
+        <span>Speaking...</span>
+    </div>
+
+    <!-- Chat Panel -->
+    <div class="chat-panel">
+        <div class="chat-container" id="chat-container">
+            <div class="chat-empty">
+                <span>💬</span>
+                Waiting for Hiyaku to speak...
+            </div>
+        </div>
+
+        <!-- Test Input Panel -->
+        <div class="test-input-panel" id="test-input-panel">
+            <div class="test-input-row">
+                <input type="text" id="test-text" class="test-text-input" placeholder="Type or use mic..." />
+                <button id="test-mic-btn" class="test-mic-btn" title="Hold to speak">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" y1="19" x2="12" y2="23" />
+                        <line x1="8" y1="23" x2="16" y2="23" />
+                    </svg>
+                </button>
+                <button id="test-send-btn" class="test-send-btn">Send</button>
+            </div>
+            <div class="test-emotion-row">
+                <span class="test-emotion-label">Emotion:</span>
+                <button class="test-emotion-btn active" data-emotion="neutral">😐 Neutral</button>
+                <button class="test-emotion-btn" data-emotion="happy">😊 Happy</button>
+                <button class="test-emotion-btn" data-emotion="sad">😢 Sad</button>
+                <button class="test-emotion-btn" data-emotion="angry">😠 Angry</button>
+                <button class="test-emotion-btn" data-emotion="surprised">😮 Surprised</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text" id="loading-text">Initializing...</div>
+        <div class="loading-subtext">Loading VRM model & connecting to backend</div>
+    </div>
+
+    <!-- Import Maps for ES Modules (CDN via esm.sh) -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://esm.sh/three@0.186.0",
+            "three/addons/": "https://esm.sh/three@0.186.0/examples/jsm/",
+            "@pixiv/three-vrm": "https://esm.sh/@pixiv/three-vrm@3.5.5?external=three"
+        }
+    }
+    </script>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>

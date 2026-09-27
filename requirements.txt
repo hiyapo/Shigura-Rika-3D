@@ -1,0 +1,5 @@
+OpenAI
+pyyaml
+fastapi
+uvicorn[standard]
+websockets
